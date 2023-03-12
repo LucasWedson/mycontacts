@@ -11,8 +11,10 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: {
-    linebreak-style: 'off',
-    consistent-return: 'off',
+    'class-methods-use-this': 'off',
+    'consistent-return': 'off',
+    camelcase: 'off',
+    space-before-blocks: 'off',
 
   },
 };
