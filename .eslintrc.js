@@ -12,5 +12,7 @@ module.exports = {
   },
   rules: {
     linebreak-style: 'off',
+    consistent-return: 'off',
+
   },
 };

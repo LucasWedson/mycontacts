@@ -6,7 +6,7 @@
   "dependencies": {
     "express": "^4.18.2",
     "nodemon": "^2.0.21",
-    "uuidv4": "^6.2.13"
+    "uuid": "^9.0.0"
   },
   "scripts": {
     "dev": "npx nodemon src/index.js"
