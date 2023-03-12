@@ -5,7 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
-    "nodemon": "^2.0.21"
+    "nodemon": "^2.0.21",
+    "uuidv4": "^6.2.13"
   },
   "scripts": {
     "dev": "npx nodemon src/index.js"

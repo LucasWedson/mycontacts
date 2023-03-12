@@ -1,7 +1,12 @@
+const ContactsRepository = require('../repositories/ContactsRepository');
+
+
 class ContactController {
-  index(request, response) {
+  async index(request, response) {
+
+    const contacts = await ContactsRepository.findAll();
     // Listar todos os registros
-    response.send('Send from Contact Controller');
+    response.json(contacts);
   }
 
   show(){
