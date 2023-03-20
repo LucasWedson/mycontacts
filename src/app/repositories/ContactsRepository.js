@@ -1,27 +1,4 @@
-const { v4 } = require('uuid');
-
 const db = require('../../database');
-
-
-
-
-let contacts = [
-  {
-    id: v4(),
-    name: 'Joe',
-    email: 'Jose@mail.com',
-    phone: '555-555555',
-    category_id: v4(),
-  },
-  {
-    id: v4(),
-    name: 'Lucas',
-    email: 'Lucas@mail.com',
-    phone: '555-55',
-    category_id: v4(),
-  },
-];
-
 
 
 class ContactsRepository {
@@ -69,7 +46,9 @@ class ContactsRepository {
 
   async delete(id) {
     const deleteOp = await db.query(`
-    DELETE FROM contacts WHERE id = $1`, [id]);
+    DELETE FROM contacts WHERE id = $1
+    RETURNING *
+    `, [id]);
 
     return deleteOp;
   }
